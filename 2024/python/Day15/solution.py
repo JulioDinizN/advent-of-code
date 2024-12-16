@@ -1,5 +1,3 @@
-from copy import deepcopy
-
 inputGrid, inputMoves = open("input.txt").read().split("\n\n")
 
 def solution_part_01():
@@ -107,7 +105,7 @@ def solution_part_02():
 
         if not go: continue
         
-        copy = deepcopy(grid)
+        copy = [list(row) for row in grid]
 
         grid[r][c] = "."
         grid[r + dr][c + dc] = "@"
